@@ -2,6 +2,7 @@
 Powered by Anthony Kung
 
 ## Content
+1. Intro
 
 ## Intro
 SCMS is designed to help KidSpirit OSU in the digital management of their campers. It provides them a tool to quickly identify a camper, get immediate help, locate a nearby responder, process payment and more.
