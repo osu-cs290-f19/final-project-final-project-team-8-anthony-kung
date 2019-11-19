@@ -1,5 +1,5 @@
 # Summer Camp Management System (SCMS)
-Powered by Anthony Kung
+Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://anthonykung.com))
 
 ## Content
 1. Intro
@@ -20,10 +20,23 @@ The SCMS also incorporated a mobile payment system (mPOS) powered by Stripe API.
 
 To facilitate communication, the SCMS also includes a built-in push-to-talk voice communication system. This allows camp staff to use it as a walkie talkie with no range limit (via the internet).
 
+## Docs
+
+## Install
+
+## Usage
+
+## Contributing
+Thank you for your interest in contributing SCMS ☺
+
+You can contribute by using either the pull request or creating issues. More information on [Contributing Guideline](./CONTRIBUTING.md)
+
 ## License
 GNU AGPLv3
 
-Copyright (C) 2019  Anthony Kung
+Summer Camp Management System - Making sure the kids' welfare.
+
+Copyright (C) 2019  Anthony Kung <hello@anthonykung.com> by [Oregon State University Copyright Principles](https://advantage.oregonstate.edu/sites/advantage.oregonstate.edu/files/osu_copyright_principles_0.pdf).
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -37,6 +50,8 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+You can contact Anthony Kung at hello@anthonykung.com or proceed to [anthonykung.com](https://anthonykung.com).
 
 If your software can interact with users remotely through a computer
 network, you should also make sure that it provides a way for users to
