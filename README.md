@@ -35,7 +35,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <(https://www.gnu.org/licenses/)[https://www.gnu.org/licenses/]>.
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 If your software can interact with users remotely through a computer
 network, you should also make sure that it provides a way for users to
@@ -48,4 +48,4 @@ specific requirements.
 You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
-<(https://www.gnu.org/licenses/)[https://www.gnu.org/licenses/]>.
+<https://www.gnu.org/licenses/>.
