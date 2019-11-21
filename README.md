@@ -2,12 +2,12 @@
 Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://anthonykung.com))
 
 ## Content
-1. Intro
-2. Docs
-3. Install
-4. Usage
-5. Contributing
-6. License
+1. [Intro](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#intro)
+2. [Docs](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#docs)
+3. [Install](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#install)
+4. [Usage](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#usage)
+5. [Contributing](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#contributing)
+6. [License](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#license)
 
 ## Intro
 SCMS is designed to help KidSpirit OSU in the digital management of their campers. It provides them a tool to quickly identify a camper, get immediate help, locate a nearby responder, process payment and more.
