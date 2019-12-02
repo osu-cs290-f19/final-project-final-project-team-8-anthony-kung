@@ -1,0 +1,28 @@
+{
+  "name": "scms",
+  "version": "1.0.0",
+  "description": "Summer Camp Management System - Making sure the kids' welfare.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "greenlock": "^3.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js > server-log.txt 2> error-log.txt &"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-f19/final-project-team-8-anthony-kung.git"
+  },
+  "keywords": [
+    "scms"
+  ],
+  "author": "Anthony Kung",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-f19/final-project-team-8-anthony-kung/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-f19/final-project-team-8-anthony-kung#readme"
+}
