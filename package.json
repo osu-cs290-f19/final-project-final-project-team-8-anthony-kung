@@ -5,12 +5,15 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
-    "greenlock": "^3.1.5"
+    "greenlock": "^3.1.5",
+    "greenlock-express": "^3.1.1",
+    "handlebars": "^4.5.3"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js > server-log.txt 2> error-log.txt &"
+    "start": "node server.js > server-log.txt 2> error-log.txt &",
+    "stop": "process.exit()"
   },
   "repository": {
     "type": "git",

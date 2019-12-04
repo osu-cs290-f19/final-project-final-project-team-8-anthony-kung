@@ -10,14 +10,19 @@ const http = require('http');
 const url = require('url');
 const express = require('express');
 const app = express();
+const Handlebars = require("handlebars");
 
 const hostname = 'localhost';
-const port = 80;
+var port = 80;
+
+app.get('/', function (req, res) {
+  app.status(200).send('./html/index.html');
+});
 
 app.use(express.static('html'));
 
-app.get('/', function (req, res) {
-  res.send('Hello World');
+app.get('*', function (req, res) {
+  app.send('404');
 });
  
-app.listen(port, () => console.log('Example app listening on port ${port}!'));
+app.listen(port, () => console.log('SCMS listening on port ' + port + '!'));
