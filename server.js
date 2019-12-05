@@ -5,11 +5,10 @@
  * Date: Nov 24, 2019                                     *
  **********************************************************/
 
-
 const http = require('http');
-const url = require('url');
 const express = require('express');
 const app = express();
+const path = require('path');
 const Handlebars = require("handlebars");
 
 const hostname = 'localhost';
@@ -24,5 +23,5 @@ app.use(express.static('html'));
 app.get('*', function (req, res) {
   app.send('404');
 });
- 
+
 app.listen(port, () => console.log('SCMS listening on port ' + port + '!'));
