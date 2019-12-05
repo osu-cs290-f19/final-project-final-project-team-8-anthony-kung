@@ -15,7 +15,7 @@ const hostname = 'localhost';
 var port = 80;
 
 app.get('/', function (req, res) {
-  app.status(200).send('./html/index.html');
+  app.status(200).send(__dirname + '/html/index.html');
 });
 
 app.use(express.static('html'));
