@@ -29,7 +29,7 @@ To facilitate communication, the SCMS also includes a built-in push-to-talk voic
 ## Contributing
 Thank you for your interest in contributing SCMS ☺
 
-You can contribute by using either the pull request or creating issues. More information on [Contributing Guideline](./CONTRIBUTING.md)
+You can contribute by using either the pull request or creating issues. More information on [Contributing Guideline](./DOCS/CONTRIBUTING.md)
 
 ## License
 GNU AGPLv3
