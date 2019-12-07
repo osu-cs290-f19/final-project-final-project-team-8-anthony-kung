@@ -1,0 +1,8 @@
+[
+  {
+    "path": "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js"
+  },
+  {
+    "path": "/assets/navBar.js"
+  }
+]

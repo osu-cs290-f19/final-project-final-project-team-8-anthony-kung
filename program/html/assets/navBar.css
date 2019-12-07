@@ -1,0 +1,52 @@
+#navbar {
+  overflow: hidden;
+  background-color: lightsalmon;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: salmon;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: tomato;
+  color: white;
+}
+
+.secondLevelMenu {
+  display: none;
+  position: absolute;
+  background-color: cornsilk;
+  color: #38b6ff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.secondLevelMenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.secondLevelMenu a:hover {
+  background-color: salmon;
+}
+
+.topLevelMenu:hover .secondLevelMenu {
+  display: block;
+}
+
+.topLevelMenu:hover .navitems {
+  background-color: tomato;
+}
