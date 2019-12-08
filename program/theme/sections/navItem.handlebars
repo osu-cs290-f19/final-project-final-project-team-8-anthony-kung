@@ -1,8 +1,10 @@
 <div class="topLevelMenu">
   <a id="navbaritem" class="navitems" href="{{path}}">{{urlName}}</a>
   <div class="secondLevelMenu">
-    {{#each secItems}}
-      {{> secItem}}
-    {{/each}}
+    {{# if secItems}}
+      {{#each secItems}}
+        {{> secItem}}
+      {{/each}}
+    {{/if}}
   </div>
 </div>

@@ -1,52 +1,64 @@
 #navbar {
+  float: right;
   overflow: hidden;
-  background-color: lightsalmon;
+  align-items: left;
+  display: inline;
 }
 
-#navbar a {
-  float: left;
-  display: block;
-  color: white;
+#navbaritem {
+  display: inline;
+  color: #38b6ff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: 'Fredoka One', cursive;
 }
 
 #navbar a:hover {
-  background-color: salmon;
   color: black;
 }
 
 #navbar a.active {
-  background-color: tomato;
-  color: white;
+  color: #38b6ff;
+}
+
+.topLevelMenu {
+  display: inline;
+}
+
+.topLevelMenu:hover {
+  display: inline;
 }
 
 .secondLevelMenu {
   display: none;
-  position: absolute;
-  background-color: cornsilk;
-  color: #38b6ff;
+  text-align: left;
+  width: fit-content;
+  overflow: auto;
+  background-color: #ffffff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  position: absolute;
   z-index: 1;
 }
 
 .secondLevelMenu a {
-  color: black;
-  padding: 12px 16px;
+  color: #38b6ff;
+  padding: 0 16px 0 16px;
   text-decoration: none;
   display: block;
+  font-size: 17px;
+  font-family: 'Fredoka One', cursive;
 }
 
 .secondLevelMenu a:hover {
-  background-color: salmon;
+  color: #38b6ff;
 }
 
 .topLevelMenu:hover .secondLevelMenu {
   display: block;
+  position: relative;
 }
 
 .topLevelMenu:hover .navitems {
-  background-color: tomato;
 }

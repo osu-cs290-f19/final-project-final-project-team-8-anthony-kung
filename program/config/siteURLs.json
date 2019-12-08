@@ -4,9 +4,25 @@
     "path": "/",
     "secItems": [
       {
+        "urlName": "Home",
+        "path": "/"
+      }
+    ]
+  },
+  {
+    "urlName": "About",
+    "path": "/",
+    "secItems": [
+      {
         "urlName": "",
         "path": ""
-      },
+      }
+    ]
+  },
+  {
+    "urlName": "Login / Register",
+    "path": "/",
+    "secItems": [
       {
         "urlName": "",
         "path": ""
