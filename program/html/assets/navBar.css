@@ -1,30 +1,40 @@
 #navbar {
   float: right;
   overflow: hidden;
-  align-items: left;
-  display: inline;
+  vertical-align: middle;
+  /* line-height: 50px; */
+  /* align-items: left; */
+  /* display: inline; */
 }
 
 #navbaritem {
-  display: inline;
-  color: #38b6ff;
+  float: left;
+  /* font-size: 16px; */
+  /* color: white; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  /* display: inline; */
+  color: #38b6ff;
+  /* text-align: center; */
+  /* padding: 14px 16px; */
+  /* text-decoration: none; */
   font-size: 17px;
   font-family: 'Fredoka One', cursive;
 }
 
-#navbar a:hover {
+#navbaritem:hover {
   color: black;
 }
 
-#navbar a.active {
-  color: #38b6ff;
+#navbaritem.active {
+  color: #ff914d;
 }
 
 .topLevelMenu {
-  display: inline;
+  float: left;
+  overflow: hidden;
+  /* display: inline; */
 }
 
 .topLevelMenu:hover {
@@ -33,22 +43,26 @@
 
 .secondLevelMenu {
   display: none;
-  text-align: left;
+  /* text-align: left; */
   width: fit-content;
-  overflow: auto;
-  background-color: #ffffff;
+  /* overflow: auto; */
+  /* margin: none; */
+  /* padding: none; */
+  background-color: #ff914d;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   position: absolute;
   z-index: 1;
 }
 
 .secondLevelMenu a {
+  float: none;
   color: #38b6ff;
   padding: 0 16px 0 16px;
   text-decoration: none;
   display: block;
   font-size: 17px;
   font-family: 'Fredoka One', cursive;
+  text-align: left;
 }
 
 .secondLevelMenu a:hover {
@@ -61,4 +75,60 @@
 }
 
 .topLevelMenu:hover .navitems {
+}
+
+.navbarctn .navicon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbarctn a {
+    display: none;
+  }
+
+  .navbarctn a.navicon {
+    float: right;
+    display: block;
+  }
+
+  .navbarctn {
+    line-height: 50px;
+  }
+
+  .navbarctn.resnav {
+    position: relative;
+  }
+
+  .navbarctn.resnav .navicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbarctn.resnav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* background-color: yellow; */
+  padding: 50px;
+  font-size: 20px;
 }

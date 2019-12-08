@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header sticky">
   <div>
     {{#each site}}
       {{#if headerLogo}}
@@ -13,9 +13,12 @@
       {{/if}}
     {{/each}}
   </div>
-  <div id="navbar" class="navbarctn">
+  <div id="navbar" class="navbarctn dropdown">
     {{#each navItems}}
       {{> navItem}}
     {{/each}}
+    <a href="javascript:void(0);" class="navicon" onclick="navBarResClick()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>

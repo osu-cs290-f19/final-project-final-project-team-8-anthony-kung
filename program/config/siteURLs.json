@@ -4,14 +4,14 @@
     "path": "/",
     "secItems": [
       {
-        "urlName": "Home",
-        "path": "/"
+        "urlName": "",
+        "path": ""
       }
     ]
   },
   {
     "urlName": "About",
-    "path": "/",
+    "path": "/about",
     "secItems": [
       {
         "urlName": "",
@@ -20,8 +20,8 @@
     ]
   },
   {
-    "urlName": "Login / Register",
-    "path": "/",
+    "urlName": "Register",
+    "path": "/register",
     "secItems": [
       {
         "urlName": "",

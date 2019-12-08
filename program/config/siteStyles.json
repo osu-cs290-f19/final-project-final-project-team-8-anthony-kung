@@ -10,5 +10,11 @@
   },
   {
     "path": "https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
+  },
+  {
+    "path": "/assets/theme.css"
+  },
+  {
+    "path": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   }
 ]

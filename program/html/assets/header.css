@@ -6,7 +6,8 @@ body {
 .header {
   padding: 1%;
   height: 50px;
-  line-height: 50px;
+  background-color: white;
+  /* line-height: 50px; */
 }
 
 .headerLogo {

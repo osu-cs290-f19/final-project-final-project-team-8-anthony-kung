@@ -1,0 +1,51 @@
+body {
+  font-family: 'Fredoka One', cursive;
+  font-size: 17px;
+}
+
+a {
+  color: #38b6ff;
+}
+
+a:hover {
+  color: #ff914d;
+}
+
+.textWithBackground {
+  color: white;
+}
+
+.primaryText {
+  color: #38b6ff;
+}
+
+.secondaryText {
+  color: black;
+}
+
+.themeButton {
+  padding: 10%;
+  border: 1px solid;
+  font-size: 17px;
+  font-weight: bold;
+  border-color: #38b6ff;
+  border-radius: 4px;
+  background-color: #38b6ff;
+  color: white;
+}
+
+.themeButton:hover {
+  border-color: #38b6ff;
+  background-color: white;
+  color: #38b6ff;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.gridItem {
+  margin: auto;
+  padding: 1%;
+}
