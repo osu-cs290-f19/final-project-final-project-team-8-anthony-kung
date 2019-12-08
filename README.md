@@ -7,7 +7,8 @@ Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://antho
 3. [Install](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#install)
 4. [Usage](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#usage)
 5. [Contributing](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#contributing)
-6. [License](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#license)
+6. [Security](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#security)
+7. [License](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#license)
 
 ## Intro
 SCMS is designed to help KidSpirit OSU in the digital management of their campers. It provides them a tool to quickly identify a camper, get immediate help, locate a nearby responder, process payment and more.
@@ -31,8 +32,13 @@ Thank you for your interest in contributing SCMS ☺
 
 You can contribute by using either the pull request or creating issues. More information on [Contributing Guideline](./DOCS/CONTRIBUTING.md)
 
+## Security
+We take any security risks seriously, if you have found or suspected a vulnerability or anything that might compromise our security, we would very much appreciate it if you can report it to us.
+
+More information on [SECURITY.md](./SECURITY.md)
+
 ## License
-GNU AGPLv3
+[GNU AGPLv3](./DOCS/LICENSE.md)
 
 Summer Camp Management System - Making sure the kids' welfare.
 
