@@ -13,8 +13,8 @@ If you have found a bug or an issue with the SCMS, tell us about it! We want to 
 
 To facilitate the process, here are the template that you can use:
 
-- [Bug Report]("./ISSUE_TEMPLATE/bug_report.md")
-- [Feature Request]("./ISSUE_TEMPLATE/feature_request.md")
+- [Bug Report](./ISSUE_TEMPLATE/bug_report.md)
+- [Feature Request](./ISSUE_TEMPLATE/feature_request.md)
 
 ## 3. Security Concerns
 If you suspect a vulnerability or anything that might compromise the security of this software, we wold very much appericiate if you could report them to use. For more information, please read our [SECURITY.md](../SECURITY.md).
