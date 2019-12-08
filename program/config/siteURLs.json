@@ -20,6 +20,16 @@
     ]
   },
   {
+    "urlName": "Login",
+    "path": "/login",
+    "secItems": [
+      {
+        "urlName": "",
+        "path": ""
+      }
+    ]
+  },
+  {
     "urlName": "Register",
     "path": "/register",
     "secItems": [
