@@ -10,8 +10,38 @@
     ]
   },
   {
+    "urlName": "Pricing",
+    "path": "/pricing",
+    "secItems": [
+      {
+        "urlName": "",
+        "path": ""
+      }
+    ]
+  },
+  {
     "urlName": "About",
     "path": "/about",
+    "secItems": [
+      {
+        "urlName": "",
+        "path": ""
+      }
+    ]
+  },
+  {
+    "urlName": "Contact",
+    "path": "/contact",
+    "secItems": [
+      {
+        "urlName": "",
+        "path": ""
+      }
+    ]
+  },
+  {
+    "urlName": "Login",
+    "path": "/login",
     "secItems": [
       {
         "urlName": "",

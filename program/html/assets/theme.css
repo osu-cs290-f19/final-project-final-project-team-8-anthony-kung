@@ -3,8 +3,13 @@ body {
   font-size: 17px;
 }
 
+.secondaryFont {
+  font-family: 'Varela Round', sans-serif;
+}
+
 a {
   color: #38b6ff;
+  text-decoration: none;
 }
 
 a:hover {
@@ -15,11 +20,11 @@ a:hover {
   color: white;
 }
 
-.primaryText {
+.primaryColor {
   color: #38b6ff;
 }
 
-.secondaryText {
+.secondaryColor {
   color: black;
 }
 
@@ -40,12 +45,60 @@ a:hover {
   color: #38b6ff;
 }
 
-.gridContainer {
+.twoGridContainer {
   display: grid;
   grid-template-columns: auto auto;
 }
 
+.threeGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.fourGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* justify-content: space-between; */
+}
+
+.fiveGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+@media screen and (max-width: 600px) {
+  /* .twoGridContainer { */
+    /* display: grid; */
+    /* grid-template-columns: auto; */
+  /* } */
+
+  .threeGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .fourGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+    /* justify-content: space-between; */
+  }
+
+  .fiveGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
 .gridItem {
+  margin: auto;
+  padding: 1%;
+}
+
+.center {
+  text-align: center;
+}
+
+.containIt {
   margin: auto;
   padding: 1%;
 }
