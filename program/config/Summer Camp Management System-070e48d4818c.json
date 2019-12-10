@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "summer-camp-management-system",
+  "private_key_id": "070e48d4818c77b06224df230edc7727f5cb50b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChDd2ocNwY870R\n5/U787E1x0GQj58xFYQtDIjnbalDdKl8GvyTO83MdsXTFZiNZ2XoOpoVwaI82fmE\nnrS6LICyUqJuk2Ls6Ckh3fJ9QTUZzOKtmkBQV4hLOmCbvPK4nLoIjHkKiMIf7rZQ\n73hauaNu1nlOcvK1xy75pCJN6B1HNQcNdhn5fueWeYAOehabiFdX3/qieOUkFowT\nse4wcLiZ4aDX3/TFG+aj6V4l8Rx7jUNL2UCjMlnOCMQfiQCeHNwf3Gwhe1/bJgkj\nAmOf13mHpCo2TRW4mQKoBkJuRGXngsDMLQhMNPleqhSriGEESmtDdzViX1KCulER\nzjid2ClfAgMBAAECggEADMWUjuTdp22Tevs0mOZYkXBgPtkM4ZpttW7Zin9z8qv/\n5sjIaoVNwDRTuCDDIho8MXWNk5fGnbcW0PwO+Uv0gW+z1DtZlyT1YhX/mAxBlu6x\ns90C0vw7YY/bFRlKUaE9etZnoOdl0ZzKFigEw4PA4Kt0dOgBCbD72i3jJIokNunE\nOjFWvIst0KCk65OUiJJT0K/uVUOq18zjaYVn2n8UQFl+h1fUc+O1s/6J2l/JXV+a\nN81nEfax3J28RAR2SkHYoN/m/oRMhGma4/cpR/5EmfG18AoIhNAjmq0/s7nnSCIU\n8P5pHXNph7SaiwtlQWEY5LNs+zWNkXJ8GkV5WcpcRQKBgQDS5DJn/BOvsBSSe9mi\n9dKN79nthiXr0C/BgwaLfcm5sKzbmEOCSC1GxAe+XqKqIoO3msW/9BkDtvQlNFAo\n4hAoPuPcioV/9bVKRDUEiwrlHnAxLLpGi/mB/4lnXe/tQD5ZME0rRiIw3T3VgqCI\npQHw5v5Hj7at/5/Hd49UsaxXAwKBgQDDgLns28nKrkaCU/zLz5ozKWWaDToFCUXn\ny7a0XRQpvFpq4pyMLnTt1MDuzN2cP/uzJL5XsRsA04soJXMh1PNqHOQsubazNY1I\nnaHCEKSFOqnxQCb/eINW6ccXyIHWUJ8gF2D4bQ2jAaqpCB6YwCwAeZnKkHA8ufDx\n+ZiuUTZ3dQKBgGk2X89w+4FTH3BVSab7bShS2S6fFpwnKSwp6kH9Z360ngiQVl3R\nFIWRlytqm0y2G3CmTrINXc10oSlOiA9deSIa/iMxGJlWRDPhA3JYy/6yyNY/sk8v\n1jL9AdgIDYMX4gMtDdLhEn2+YvL6UIzbhbRiCco58LGuLlCdXWyrl4dxAoGAWE1v\nLOWE+m/G1xzaRLArJMqg4njw6M9sbKrdhg+4iLVTXY2nScW9+KIs1m9f9TANHrgM\n5QzQdooWA3cOzowhuZ79DJqBQ+Z/Pvo70qyzsp1xns7sDl2/bOVAkKR2yHc3uEX2\n/Z48F5EsJRbOww2hkkFaTlz45OTTSGgFJ071O/UCgYAuGMC2Q2LtGO8yLL/cagzG\n1ley0r2N9R36vqe7BEv/gyK8BOp0cgVModeEKm9cPmuBZskrx79L1N+ED7khHtd6\nwXJRvFE+XGxeI/8pXuf6Ldm7TsapXgt71lNc3lGRLIE8VZW/p77QWV8sjhqfMviG\n7glksSyDHPDw0V4hBju5ew==\n-----END PRIVATE KEY-----\n",
+  "client_email": "summer-camp-management-system@appspot.gserviceaccount.com",
+  "client_id": "106938494061946734552",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/summer-camp-management-system%40appspot.gserviceaccount.com"
+}

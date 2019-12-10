@@ -1,3 +1,12 @@
 *.log
+<<<<<<< HEAD
+program/config/Summer\ Camp\ Management\ System-070e48d4818c.json
+program/node_modules
+=======
 ./program/config/Summer\ Camp\ Management\ System-070e48d4818c.json
+<<<<<<< HEAD
 program/node_modules/
+=======
+./program/node_modules
+>>>>>>> 61aa2a2354e85d71858fa990d57e23291cd37327
+>>>>>>> 382c14a1d3a7565ed7b1b6679424fd6d39898ab4
