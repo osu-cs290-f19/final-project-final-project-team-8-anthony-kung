@@ -1,0 +1,69 @@
+.userGridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 800px) {
+  .userGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+}
+
+.userGridContainer
+{
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+  border-color: black;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.userGridItem {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.userImageCtn {
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.userImage {
+  /* float: left; */
+  /* min-width: 300px; */
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.12);
+  border-radius: 30px;
+  transition: transform .2s;
+  transition-duration: 1500ms;
+  transition-timing-function: ease;
+  transition-delay: 0;
+}
+.userImage:hover
+{
+  transform: scale(1.2);
+}
+
+.userDetails {
+  /* float: right; */
+  margin-right: auto;
+}
+
+.userName{
+  color: #38b6ff;
+}
+.userName:hover {
+  color: #ff914d;
+}

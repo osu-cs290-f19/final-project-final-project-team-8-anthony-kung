@@ -3,8 +3,13 @@ body {
   font-size: 17px;
 }
 
+.secondaryFont {
+  font-family: 'Varela Round', sans-serif;
+}
+
 a {
   color: #38b6ff;
+  text-decoration: none;
 }
 
 a:hover {
@@ -15,11 +20,11 @@ a:hover {
   color: white;
 }
 
-.primaryText {
+.primaryColor {
   color: #38b6ff;
 }
 
-.secondaryText {
+.secondaryColor {
   color: black;
 }
 
@@ -40,12 +45,117 @@ a:hover {
   color: #38b6ff;
 }
 
-.gridContainer {
+.twoGridContainer {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.twoGridCtn {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.threeGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.fourGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* justify-content: space-between; */
+}
+
+.fiveGridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+@media screen and (max-width: 600px) {
+  /* .twoGridContainer { */
+    /* display: grid; */
+    /* grid-template-columns: auto; */
+  /* } */
+
+  .twoGridCtn {
+    /* display: grid; */
+    grid-template-columns: auto;
+  }
+
+  .threeGridContainer {
+    /* display: grid; */
+    grid-template-columns: auto;
+  }
+
+  .fourGridContainer {
+    /* display: grid; */
+    grid-template-columns: auto;
+    /* justify-content: space-between; */
+  }
+
+  .fiveGridContainer {
+    /* display: grid; */
+    grid-template-columns: auto;
+  }
 }
 
 .gridItem {
   margin: auto;
   padding: 1%;
+}
+
+.center {
+  text-align: center;
+}
+
+.containIt {
+  margin: auto;
+  padding: 1%;
+}
+
+.themeFormCtn {
+  margin: 5% 20% 5% 20%;
+}
+
+.themeForm {
+
+}
+
+.themeInputLabel {
+  margin-bottom: 1%;
+}
+
+.themeInput {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  padding: 1%;
+  border: 1% solid;
+  border-color: #38b6ff;
+  border-radius: 4px;
+  background-color: #efefef;
+  box-shadow: none;
+  color: #38b6ff;
+}
+
+.themeFormSubmit {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 5%;
+  padding: 1%;
+  border: 1% solid;
+  border-color: #38b6ff;
+  border-radius: 4px;
+  background-color: #efefef;
+  color: #38b6ff;
+}
+
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
 }

@@ -4,13 +4,20 @@
   "description": "Summer Camp Management System - Making sure the kids' welfare.",
   "main": "server.js",
   "dependencies": {
+    "canvas": "^2.6.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "greenlock": "^3.1.5",
     "greenlock-express": "^3.1.1",
-    "handlebars": "^4.5.3"
+    "handlebars": "^4.5.3",
+    "mathjs": "^6.2.5",
+    "multer": "^1.4.2",
+    "natural": "^0.6.3",
+    "redis": "^2.8.0",
+    "yargs": "^15.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js > server-log.txt 2> error-log.txt &",

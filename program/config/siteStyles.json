@@ -12,9 +12,33 @@
     "path": "https://fonts.googleapis.com/css?family=Fredoka+One&display=swap"
   },
   {
+    "path": "https://fonts.googleapis.com/icon?family=Material+Icons"
+  },
+  {
     "path": "/assets/theme.css"
   },
   {
     "path": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  },
+  {
+    "path": "/assets/footer.css"
+  },
+  {
+    "path": "https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+  },
+  {
+    "path": "https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+  },
+  {
+    "path": "/assets/pricing.css"
+  },
+  {
+    "path": "/assets/facerec.css"
+  },
+  {
+    "path": "/assets/upload.css"
+  },
+  {
+    "path": "/assets/user.css"
   }
 ]

@@ -1,0 +1,26 @@
+
+  <audio id="audioAlert" autoplay controlsList="nodownload">
+    <source src="/assets/warning.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audioAlert2" autoplay controlsList="nodownload">
+    <source src="/assets/peanutAllergy.mp3" type="audio/mpeg">
+  </audio>
+  <div class="userGridContainer">
+    <div class="userImageCtn userGridItem">
+      <a href="/staffs/{{staffs.name}}">
+        <img class="userImage" src="{{staffs.face}}" />
+      </a>
+    </div>
+    <div class="userDetails userGridItem">
+      <a href="/staffs/{{staffs.name}}">
+        <h2 class="userName">Name: {{staffs.name}}</h2>
+      </a>
+      <h3 class="userAlert">Alert: {{staffs.alert}}</h3>
+      <h4 class="userMedical">Medical: {{staffs.medical}}</h4>
+      <h4 class="userMedications">Medications: {{staffs.medications}}</h4>
+      <h4 class="userClass">Class: {{staffs.class}}</h4>
+      <h4 class="userSup">Supervisor: {{staffs.supervisor}}</h4>
+      <h4 class="userAge">Age: {{staffs.age}}</h4>
+      <h4 class="userContact">Staff Contact:{{staffs.contact}}</h4>
+    </div>
+  </div>

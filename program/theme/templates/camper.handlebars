@@ -1,0 +1,23 @@
+
+  <audio id="audioAlert" autoplay controlsList="nodownload">
+    <source src="/assets/warning.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audioAlert2" autoplay controlsList="nodownload">
+    <source src="/assets/peanutAllergy.mp3" type="audio/mpeg">
+  </audio>
+  <div class="userGridContainer">
+    <div class="userImageCtn userGridItem">
+      <img class="userImage" src="{{campers.face}}" />
+    </div>
+    <div class="userDetails userGridItem">
+      <h2 class="userName">Name: {{campers.name}}</h2>
+      <h3 class="userAlert">Alert: {{campers.alert}}</h3>
+      <h4 class="userMedical">Medical: {{campers.medical}}</h4>
+      <h4 class="userMedications">Medications: {{campers.medications}}</h4>
+      <h4 class="userClass">Class: {{campers.class}}</h4>
+      <h4 class="userSup">Supervisor: {{campers.supervisor}}</h4>
+      <h4 class="userAge">Age: {{campers.age}}</h4>
+      <h4 class="userGuardian">Guardian: {{campers.guardian}}</h4>
+      <h4 class="userContact">Guardian Contact: {{campers.contact}}</h4>
+    </div>
+  </div>
