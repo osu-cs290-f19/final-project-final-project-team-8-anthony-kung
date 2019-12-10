@@ -1,4 +1,10 @@
-<form method="post" enctype="multipart/form-data" action="/upload">
-  <input type="file" name="file">
-  <input type="submit" value="Submit">
-</form>
+<div class="themeFormCtn">
+  <h2>Upload Camper</h2>
+  <form class="themeForm" method="post" enctype="multipart/form-data" action="/upload">
+    <label>User Name: </label>
+    <input class="themeInput" type="text" name="username" />
+    <label class="themeInputLabel">Face Regnization Picture: </label>
+    <input class="themeInput" type="file" name="file" />
+    <input class="themeFormSubmit" type="submit" value="Submit" />
+  </form>
+</div>

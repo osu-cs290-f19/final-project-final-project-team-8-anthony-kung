@@ -1,0 +1,33 @@
+.userGridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media screen and (max-width: 600px) {
+  .userGridContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+.userGridItem {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.userImageCtn {
+  float: left;
+}
+
+.userImage {
+  /* float: left; */
+  min-width: 500px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.userDetails {
+  float: right;
+}

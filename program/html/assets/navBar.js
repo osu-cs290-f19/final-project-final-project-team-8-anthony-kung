@@ -4,7 +4,7 @@ console.log(navBar);
 console.log(navBar.length);
 
 console.log(document.getElementsByClassName("navitems")[0]);
-console.log(navBar[1].href);
+//console.log(navBar[1].href);
 
 for (var i = 0; i < navBar.length; i++) {
   if (navBar[i].href == window.location.href) {
