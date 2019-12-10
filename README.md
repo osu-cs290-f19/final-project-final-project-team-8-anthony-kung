@@ -1,6 +1,8 @@
 # Summer Camp Management System (SCMS)
 Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://anthonykung.com))
 
+### WARNING THIS SOFTWARE IS NOT PCI DSS LEVEL 1 (NOT SECURE)
+
 ## Content
 1. [Intro](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#intro)
 2. [Docs](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#docs)

@@ -1,5 +1,24 @@
 {{> uploadCamper}}
 
 {{#each campers}}
-  {{> camper}}
+  <div class="userGridContainer">
+    <div class="userImageCtn userGridItem">
+      <a href="/campers/{{name}}">
+        <img class="userImage" src="{{face}}" />
+      </a>
+    </div>
+    <div class="userDetails userGridItem">
+      <a href="/campers/{{name}}">
+        <h2 class="userName">Name: {{name}}</h2>
+      </a>
+      <h3 class="userAlert">Alert: {{alert}}</h3>
+      <h4 class="userMedical">Medical: {{medical}}</h4>
+      <h4 class="userMedications">Medications: {{medications}}</h4>
+      <h4 class="userClass">Class: {{class}}</h4>
+      <h4 class="userSup">Supervisor: {{supervisor}}</h4>
+      <h4 class="userAge">Age: {{age}}</h4>
+      <h4 class="userGuardian">Guardian: {{guardian}}</h4>
+      <h4 class="userContact">Guardian Contact: {{contact}}</h4>
+    </div>
+  </div>
 {{/each}}

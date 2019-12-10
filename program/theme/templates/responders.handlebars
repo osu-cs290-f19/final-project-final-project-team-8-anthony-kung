@@ -1,0 +1,23 @@
+{{> uploadFR}}
+
+{{#each responders}}
+  <div class="userGridContainer">
+    <div class="userImageCtn userGridItem">
+      <a href="/responders/{{name}}">
+        <img class="userImage" src="{{face}}" />
+      </a>
+    </div>
+    <div class="userDetails userGridItem">
+      <a href="/responders/{{name}}">
+        <h2 class="userName">Name: {{name}}</h2>
+      </a>
+      <h3 class="userAlert">Alert: {{alert}}</h3>
+      <h4 class="userMedical">Medical: {{medical}}</h4>
+      <h4 class="userMedications">Medications: {{medications}}</h4>
+      <h4 class="userClass">Class: {{class}}</h4>
+      <h4 class="userSup">Supervisor: {{supervisor}}</h4>
+      <h4 class="userAge">Age: {{age}}</h4>
+      <h4 class="userContact">Staff Contact:{{contact}}</h4>
+    </div>
+  </div>
+{{/each}}
