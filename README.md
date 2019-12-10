@@ -26,8 +26,16 @@ To facilitate communication, the SCMS also includes a built-in push-to-talk voic
 ## Docs
 
 ## Install
+```
+   cd program
+   npm install
+```
 
 ## Usage
+```
+   cd program
+   npm start
+```
 
 ## Contributing
 Thank you for your interest in contributing SCMS ☺
