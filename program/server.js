@@ -62,10 +62,11 @@ var storage = multer.diskStorage({
   filename: function (req, file, cb) {
     var now = new Date();
     var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + ":" + now.getMinutes().toString() + ":" + now.getSeconds().toString() + ":" + now.getMilliseconds().toString();
+    var str2 = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString();
 
     if (req.body.username) {
       var fname = req.body.username.replace(' ', '-').toLowerCase();
-      cb(null, fname + path.extname(file.originalname))
+      cb(null, fname + str2 + path.extname(file.originalname))
     }
     else {
       var fname = str.replace(' ', '-').toLowerCase();
