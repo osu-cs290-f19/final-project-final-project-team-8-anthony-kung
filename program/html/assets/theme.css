@@ -50,6 +50,11 @@ a:hover {
   grid-template-columns: auto auto;
 }
 
+.twoGridCtn {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .threeGridContainer {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -72,19 +77,24 @@ a:hover {
     /* grid-template-columns: auto; */
   /* } */
 
+  .twoGridCtn {
+    /* display: grid; */
+    grid-template-columns: auto;
+  }
+
   .threeGridContainer {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: auto;
   }
 
   .fourGridContainer {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: auto;
     /* justify-content: space-between; */
   }
 
   .fiveGridContainer {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: auto;
   }
 }
@@ -140,4 +150,12 @@ a:hover {
   border-radius: 4px;
   background-color: #efefef;
   color: #38b6ff;
+}
+
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
 }

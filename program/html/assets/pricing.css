@@ -41,6 +41,7 @@
   /* width: 100%; */
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 5%;
   /* padding: 1%; */
   /* border: 2px solid; */
   /* border-color: #27c971; */
@@ -51,6 +52,10 @@
 .pricingTabNameCtn {
   background-color: #27c971;
   padding: 32px 32px 32px 32px;
+}
+
+.mainPricing div.pricingTabNameCtn {
+  background-color: #ff914d;
 }
 
 .pricingTabName {
@@ -208,4 +213,122 @@
   /* font-size: 1.6em; */
   /* line-height: 1.4em; */
   /* padding-top: 3px; */
+}
+
+.pricingMidSection {
+
+}
+
+.pricingMidSectionIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #27c971;
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 30px;
+}
+
+.pricingMidSectionIcon i {
+  color: white;
+  margin: auto;
+  padding-top: 15px;
+  transform: rotate(0deg);
+  width: 1em;
+  height: 1em;
+  position: relative;
+  display: block;
+  /* font-family: "Font Awesome 5 Free"; */
+  font-weight: 900;
+  /* vertical-align: middle; */
+}
+
+.pricingMidSectionTitleBar {
+  background-color: #3a3a3a;
+  min-height: 250px;
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: auto;
+}
+
+.pricingMidSectionTitle {
+  color: #ffffff;
+  font-family: "PT Sans", Sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.pricingMidSectionDesc {
+  color: #ffffff;
+  font-family: "PT Sans", Sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.pricingMidSectionMedia {
+  margin: 10%;
+  background-color: #27c971;
+  text-align: center;
+}
+
+.pricingMidSectionMediaItem {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricingMidSectionMediaImg {
+  width: 100%;
+  max-width: 600px;
+}
+
+.pricingMidSectionMediaTitle {
+  color: #ffffff;
+  font-family: "PT Sans", Sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.pricingMidSectionMediaButton {
+  color: #27c971;
+  font-family: "PT Sans", Sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #27c971;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.pricingMidSectionMediaButton:hover {
+  color: white;
+  font-family: "PT Sans", Sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  background-color: #27c971;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: white;
+  border-radius: 5px 5px 5px 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .pricingMidSectionMedia {
+    margin: 10% 0;
+  }
 }

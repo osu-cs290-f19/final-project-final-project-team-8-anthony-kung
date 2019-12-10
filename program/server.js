@@ -34,9 +34,19 @@ var tlsPort = process.env.TLSPORT || 443;
 const mongo = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://scms:7NKXJouDyrfm80pb@scms-cluster-ixu1e.gcp.mongodb.net/test?retryWrites=true&w=majority";
-const mongoclient = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: true });
 
-const ggclient = new vision.ImageAnnotatorClient();
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './html/uploads');
+  },
+  filename: function (req, file, cb) {
+    var fname = req.body.username.replace(' ', '-').toLowerCase();
+    cb(null, fname + path.extname(file.originalname))
+  }
+})
+
+var upload = multer({ storage: storage })
 
 // Express-Handlebars Configurations
 app.engine('handlebars', exphbs({
@@ -121,16 +131,6 @@ app.get('/register', function (req, res, next) {
     bottom: siteBottom
   });
 });
-
-async function detectFaces(inputFile) {
-  // Make a call to the Vision API to detect the faces
-  const request = {image: {source: {filename: inputFile}}};
-  const results = await client.faceDetection(request);
-  const faces = results[0].faceAnnotations;
-  const numFaces = faces.length;
-  console.log(`Found ${numFaces} face${numFaces === 1 ? '' : 's'}.`);
-  return faces;
-}
 
 // facerec Path
 app.get('/facerec', function (req, res, next) {
@@ -286,18 +286,6 @@ const handleError = (err, res) => {
   // dest: "uploads/"
   // you might also want to set some limits: https://github.com/expressjs/multer#limits
 // });
-
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, './html/uploads');
-  },
-  filename: function (req, file, cb) {
-    var fname = req.body.username.replace(' ', '-').toLowerCase();
-    cb(null, fname + path.extname(file.originalname))
-  }
-})
-
-var upload = multer({ storage: storage })
 
 // upload post Path
 app.post('/upload',
