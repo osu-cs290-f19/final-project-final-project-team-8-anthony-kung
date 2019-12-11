@@ -1,7 +1,7 @@
 # Summer Camp Management System (SCMS)
 Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://anthonykung.com))
 
-### WARNING THIS SOFTWARE IS NOT PCI DSS LEVEL 1 (NOT SECURE)
+### WARNING THIS SOFTWARE IS NOT PCI DSS LEVEL 1 COMPLIANCE (NOT SECURE)
 
 ## Content
 1. [Intro](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#intro)
@@ -32,9 +32,15 @@ To facilitate communication, the SCMS also includes a built-in push-to-talk voic
 ```
 
 ## Usage
+To start the program run
 ```
    cd program
    npm start
+```
+To stop the program run
+```
+   ps
+   kill [pid]
 ```
 
 ## Contributing
