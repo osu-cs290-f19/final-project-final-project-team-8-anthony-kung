@@ -28,7 +28,7 @@ To facilitate communication, the SCMS also includes a built-in push-to-talk voic
 ### Prerequisite: 
 
 1. Working server with IP address (You may want a domain that points to the IP too)
-2. Sudo access to your server
+2. Sudo access to your server (Root access may be required to install dependencies)
 3. `node-pre-gyp` module
 4. Node.js
 5. MongoDB
