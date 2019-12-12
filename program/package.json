@@ -4,10 +4,7 @@
   "description": "Summer Camp Management System - Making sure the kids' welfare.",
   "main": "server.js",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@google-cloud/vision": "^1.7.2",
->>>>>>> 77c47598910ea1bb96a2da5d043af755f6fa0763
     "canvas": "^2.6.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
@@ -17,26 +14,23 @@
     "greenlock-express": "^3.1.1",
     "handlebars": "^4.5.3",
     "mathjs": "^6.2.5",
-<<<<<<< HEAD
     "multer": "^1.4.2",
     "natural": "^0.6.3",
     "redis": "^2.8.0",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
-=======
     "mongodb": "^3.3.5",
     "multer": "^1.4.2",
     "natural": "^0.6.3",
     "redis": "^2.8.0",
     "request": "^2.88.0",
     "yargs": "^15.0.2"
->>>>>>> 77c47598910ea1bb96a2da5d043af755f6fa0763
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js > server-log.txt 2> error-log.txt &",
-    "stop": "process.exit()"
+    "stop": "killall node server.js"
   },
   "repository": {
     "type": "git",

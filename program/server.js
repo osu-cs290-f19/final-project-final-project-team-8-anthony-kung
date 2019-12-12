@@ -55,22 +55,23 @@ const subscriptionKey = '041233173d5e4994b3544f2a719798dc';
 const uriBase = 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect';
 const uriBase2 = 'https://westus.api.cognitive.microsoft.com/face/v1.0/verify';
 
+var now = new Date();
+var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + ":" + now.getMinutes().toString() + ":" + now.getSeconds().toString() + ":" + now.getMilliseconds().toString();
+var fname = str.replace(' ', '-').toLowerCase();
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './html/uploads');
   },
   filename: function (req, file, cb) {
-    var now = new Date();
-    var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + ":" + now.getMinutes().toString() + ":" + now.getSeconds().toString() + ":" + now.getMilliseconds().toString();
 
-    if (req.body.username) {
-      var fname = req.body.username.replace(' ', '-').toLowerCase();
-      cb(null, fname + path.extname(file.originalname))
-    }
-    else {
-      var fname = str.replace(' ', '-').toLowerCase();
-      cb(null, file.originalname + fname + path.extname(file.originalname))
-    }
+    // if (req.body.username) {
+      // var fname = req.body.username.replace(' ', '-').toLowerCase();
+      // cb(null, fname + path.extname(file.originalname))
+    // }
+    // else {
+      cb(null, file.filename + fname + path.extname(file.originalname))
+    // }
   }
 })
 
@@ -178,19 +179,22 @@ var jsonResponse = [];
 // facerec Path
 app.post('/upload-facerec',
   upload.single("file" /* name attribute of <file> element in your form */),
-  (req, res) => {
+  (req, res, next) => {
     const tempPath = req.file.path;
-    var targetPath = path.join(__dirname, "./html/", req.file.path);
+    var fileName = req.file.filename + fname + path.extname(req.file.originalname);
+    var targetPath = path.join(__dirname, "./html/", fileName);
 
     if ( (path.extname(req.file.originalname).toLowerCase() === ".png") || (path.extname(req.file.originalname).toLowerCase() === ".jpg") || (path.extname(req.file.originalname).toLowerCase() === ".jpeg") ) {
-      var imageUrl = currentHostName + '/uploads/' + req.file.filename;
+      var imageUrl = currentHostName + '/uploads/' + fileName;
 
       // Request parameters.
-      const params = {
+      var params = {
           'returnFaceId': 'true'
       };
 
-      const options = {
+      console.log("imageUrl", imageUrl);
+
+      var options = {
           uri: uriBase,
           qs: params,
           body: '{"url": ' + '"' + imageUrl + '"}',
@@ -203,17 +207,37 @@ app.post('/upload-facerec',
       request.post(options, (error, response, body) => {
         if (error) {
           console.log('Error: ', error);
+          res.status(500).render('500', {
+            site: siteData,
+            styles: siteStyles,
+            scripts: siteScripts,
+            navItems: siteURLs,
+            bottom: siteBottom
+          });
           return;
         }
+        console.log("body", body);
         uploadedRes = JSON.stringify(JSON.parse(body), null, '  ');
         console.log('Upload Response\n');
         console.log(uploadedRes);
+
+        if (!uploadedRes.faceId) {
+          res.status(500).render('500', {
+            site: siteData,
+            styles: siteStyles,
+            scripts: siteScripts,
+            navItems: siteURLs,
+            bottom: siteBottom
+          });
+          return;
+          next();
+        }
 
         var campersDB = db.collection('campers').find({});
         var campersData;
 
         campersDB.toArray(function (err, campersData) {
-          if (err) {
+          if (err && !uploadedRes) {
             res.status(500).render('500', {
               site: siteData,
               styles: siteStyles,
@@ -262,9 +286,12 @@ app.post('/upload-facerec',
                // Request parameters.
                const params2 = {};
 
-               // console.log("uploadedRes.faceId");
-               // console.log(uploadedRes.faceId);
-               // console.log(campersData[i].faceId);
+               console.log("\nuploadedRes");
+               console.log(uploadedRes);
+               console.log("\nuploadedRes.faceId");
+               console.log(uploadedRes.faceId);
+               console.log("\ncampersData[i].faceId");
+               console.log(campersData[i].faceId);
 
                const options2 = {
                    uri: uriBase2,
@@ -815,7 +842,8 @@ app.post('/upload-camper',
   upload.single("file" /* name attribute of <file> element in your form */),
   (req, res) => {
     const tempPath = req.file.path;
-    var targetPath = path.join(__dirname, "./html/", req.file.path);
+    var fileName = req.file.filename + fname + path.extname(req.file.originalname);
+    var targetPath = path.join(__dirname, "./html/", fileName);
 
     if ( (path.extname(req.file.originalname).toLowerCase() === ".png") || (path.extname(req.file.originalname).toLowerCase() === ".jpg") || (path.extname(req.file.originalname).toLowerCase() === ".jpeg")  ) {
 
@@ -827,7 +855,7 @@ app.post('/upload-camper',
       const options = {
           uri: uriBase,
           qs: params,
-          body: '{"url": ' + '"' + currentHostName + '/uploads/' + req.file.filename + '"}',
+          body: '{"url": ' + '"' + currentHostName + '/uploads/' + fileName + '"}',
           headers: {
               'Content-Type': 'application/json',
               'Ocp-Apim-Subscription-Key' : subscriptionKey
