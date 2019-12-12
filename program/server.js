@@ -62,16 +62,15 @@ var storage = multer.diskStorage({
   filename: function (req, file, cb) {
     var now = new Date();
     var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + ":" + now.getMinutes().toString() + ":" + now.getSeconds().toString() + ":" + now.getMilliseconds().toString();
-    var str2 = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString();
 
-    if (req.body.username) {
-      var fname = req.body.username.replace(' ', '-').toLowerCase();
-      cb(null, fname + str2 + path.extname(file.originalname))
-    }
-    else {
+    // if (req.body.username) {
+      // var fname = req.body.username.replace(' ', '-').toLowerCase();
+      // cb(null, fname + path.extname(file.originalname))
+    // }
+    // else {
       var fname = str.replace(' ', '-').toLowerCase();
-      cb(null, file.originalname + fname + path.extname(file.originalname))
-    }
+      cb(null, file.filename + fname + path.extname(file.originalname))
+    // }
   }
 })
 
@@ -179,7 +178,7 @@ var jsonResponse = [];
 // facerec Path
 app.post('/upload-facerec',
   upload.single("file" /* name attribute of <file> element in your form */),
-  (req, res) => {
+  (req, res, next) => {
     const tempPath = req.file.path;
     var targetPath = path.join(__dirname, "./html/", req.file.path);
 
@@ -187,11 +186,13 @@ app.post('/upload-facerec',
       var imageUrl = currentHostName + '/uploads/' + req.file.filename;
 
       // Request parameters.
-      const params = {
+      var params = {
           'returnFaceId': 'true'
       };
 
-      const options = {
+      console.log("imageUrl", imageUrl);
+
+      var options = {
           uri: uriBase,
           qs: params,
           body: '{"url": ' + '"' + imageUrl + '"}',
@@ -204,17 +205,37 @@ app.post('/upload-facerec',
       request.post(options, (error, response, body) => {
         if (error) {
           console.log('Error: ', error);
+          res.status(500).render('500', {
+            site: siteData,
+            styles: siteStyles,
+            scripts: siteScripts,
+            navItems: siteURLs,
+            bottom: siteBottom
+          });
           return;
         }
+        console.log("body", body);
         uploadedRes = JSON.stringify(JSON.parse(body), null, '  ');
         console.log('Upload Response\n');
         console.log(uploadedRes);
+
+        if (!uploadedRes.faceId) {
+          res.status(500).render('500', {
+            site: siteData,
+            styles: siteStyles,
+            scripts: siteScripts,
+            navItems: siteURLs,
+            bottom: siteBottom
+          });
+          return;
+          next();
+        }
 
         var campersDB = db.collection('campers').find({});
         var campersData;
 
         campersDB.toArray(function (err, campersData) {
-          if (err) {
+          if (err && !uploadedRes) {
             res.status(500).render('500', {
               site: siteData,
               styles: siteStyles,
@@ -263,9 +284,12 @@ app.post('/upload-facerec',
                // Request parameters.
                const params2 = {};
 
-               // console.log("uploadedRes.faceId");
-               // console.log(uploadedRes.faceId);
-               // console.log(campersData[i].faceId);
+               console.log("\nuploadedRes");
+               console.log(uploadedRes);
+               console.log("\nuploadedRes.faceId");
+               console.log(uploadedRes.faceId);
+               console.log("\ncampersData[i].faceId");
+               console.log(campersData[i].faceId);
 
                const options2 = {
                    uri: uriBase2,
