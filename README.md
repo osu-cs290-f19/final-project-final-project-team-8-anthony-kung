@@ -1,7 +1,7 @@
 # Summer Camp Management System (SCMS)
 Powered by Anthony Kung <hello@anthonykung.com> ([anthonykung.com](https://anthonykung.com))
 
-### WARNING THIS SOFTWARE IS NOT PCI DSS LEVEL 1 (NOT SECURE)
+### WARNING THIS SOFTWARE IS NOT PCI DSS LEVEL 1 COMPLIANCE (NOT SECURE)
 
 ## Content
 1. [Intro](https://github.com/osu-cs290-f19/final-project-final-project-team-8-anthony-kung#intro)
@@ -25,9 +25,42 @@ To facilitate communication, the SCMS also includes a built-in push-to-talk voic
 
 ## Docs
 
+### Prerequisite: 
+
+1. Working server with IP address (You may want a domain that points to the IP too)
+2. Sudo access to your server (Root access may be required to install dependencies)
+3. `node-pre-gyp` module
+4. Node.js
+5. MongoDB
+6. Microsoft Azure API
+7. Stripe API
+8. Google Firebase API
+9. Google Cloud API
+
+### Configurations:
+
+To config this program, edit the `siteData.json` at `program/config` with your own information.
+
+To config APIs, edit `api.json` at `program/config`. (Coming soon)
+
 ## Install
+```
+   npm install scms-awesome (Coming soon)
+   cd program
+   npm install
+```
 
 ## Usage
+To start the program run
+```
+   cd program
+   npm start
+```
+To stop the program run
+```
+   ps
+   kill [pid]
+```
 
 ## Contributing
 Thank you for your interest in contributing SCMS ☺

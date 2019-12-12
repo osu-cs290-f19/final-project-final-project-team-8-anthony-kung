@@ -70,6 +70,10 @@ var storage = multer.diskStorage({
       // cb(null, fname + path.extname(file.originalname))
     // }
     // else {
+<<<<<<< HEAD
+=======
+      var fname = str.replace(' ', '-').toLowerCase();
+>>>>>>> 75b71daf6616a88135e2498e989d8b51e13dcd7a
       cb(null, file.filename + fname + path.extname(file.originalname))
     // }
   }
