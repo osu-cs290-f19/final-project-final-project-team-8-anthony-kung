@@ -42,7 +42,7 @@ admin.initializeApp({
   databaseURL: 'https://summer-camp-management-system.firebaseio.com'
 });
 
-'use strict';
+// 'use strict';
 
 const request = require('request');
 
@@ -55,9 +55,17 @@ const subscriptionKey = '041233173d5e4994b3544f2a719798dc';
 const uriBase = 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect';
 const uriBase2 = 'https://westus.api.cognitive.microsoft.com/face/v1.0/verify';
 
+
+function spacesToDashes(str) {
+  for (var i = 0; i < str.length; i++) {
+    str = str.replace(' ', '-');
+  }
+  return str;
+}
+
 var now = new Date();
-var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + ":" + now.getMinutes().toString() + ":" + now.getSeconds().toString() + ":" + now.getMilliseconds().toString();
-var fname = str.replace(' ', '-').toLowerCase();
+var str = (now.getMonth() + 1).toString() + "-" + now.getDate().toString() + "-" + now.getFullYear().toString() + "-" + now.getHours().toString() + "-" + now.getMinutes().toString() + "-" + now.getSeconds().toString() + "-" + now.getMilliseconds().toString();
+var fname = spacesToDashes(str).toLowerCase();
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -65,17 +73,14 @@ var storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
 
-    // if (req.body.username) {
-      // var fname = req.body.username.replace(' ', '-').toLowerCase();
-      // cb(null, fname + path.extname(file.originalname))
-    // }
-    // else {
-<<<<<<< HEAD
-=======
+    if (req.body.username) {
+      var fname2 = req.body.username.replace(' ', '-').toLowerCase();
+      cb(null, fname2 + "-" + fname + path.extname(file.originalname))
+    }
+    else {
       var fname = str.replace(' ', '-').toLowerCase();
->>>>>>> 75b71daf6616a88135e2498e989d8b51e13dcd7a
-      cb(null, file.filename + fname + path.extname(file.originalname))
-    // }
+      cb(null, fname + "-" + spacesToDashes(file.originalname))
+    }
   }
 })
 
@@ -184,31 +189,34 @@ var jsonResponse = [];
 app.post('/upload-facerec',
   upload.single("file" /* name attribute of <file> element in your form */),
   (req, res, next) => {
+    console.log(req.file);
+    console.log(req.body);
     const tempPath = req.file.path;
-    var fileName = req.file.filename + fname + path.extname(req.file.originalname);
-    var targetPath = path.join(__dirname, "./html/", fileName);
+    // var fileOriginal = req.file.originalname.replace(' ', '-').replace(' ', '-');
+    // var fileName = fname + "-" + fileOriginal;
+    // var targetPath = path.join(__dirname, "./html/", fileName);
 
     if ( (path.extname(req.file.originalname).toLowerCase() === ".png") || (path.extname(req.file.originalname).toLowerCase() === ".jpg") || (path.extname(req.file.originalname).toLowerCase() === ".jpeg") ) {
-      var imageUrl = currentHostName + '/uploads/' + fileName;
+      var imageUrl2 = currentHostName + '/uploads/' + req.file.filename;
 
       // Request parameters.
-      var params = {
+      var params2 = {
           'returnFaceId': 'true'
       };
 
-      console.log("imageUrl", imageUrl);
+      console.log("imageUrl", imageUrl2);
 
-      var options = {
+      var options2 = {
           uri: uriBase,
-          qs: params,
-          body: '{"url": ' + '"' + imageUrl + '"}',
+          qs: params2,
+          body: '{"url": ' + '"' + imageUrl2 + '"}',
           headers: {
               'Content-Type': 'application/json',
               'Ocp-Apim-Subscription-Key' : subscriptionKey
           }
       };
 
-      request.post(options, (error, response, body) => {
+      request.post(options2, (error, response, body) => {
         if (error) {
           console.log('Error: ', error);
           res.status(500).render('500', {
@@ -846,8 +854,8 @@ app.post('/upload-camper',
   upload.single("file" /* name attribute of <file> element in your form */),
   (req, res) => {
     const tempPath = req.file.path;
-    var fileName = req.file.filename + fname + path.extname(req.file.originalname);
-    var targetPath = path.join(__dirname, "./html/", fileName);
+    // var fileName = req.file.filename + "-" + fname + path.extname(req.file.originalname);
+    // var targetPath = path.join(__dirname, "./html/", req.file.filename);
 
     if ( (path.extname(req.file.originalname).toLowerCase() === ".png") || (path.extname(req.file.originalname).toLowerCase() === ".jpg") || (path.extname(req.file.originalname).toLowerCase() === ".jpeg")  ) {
 
@@ -859,7 +867,7 @@ app.post('/upload-camper',
       const options = {
           uri: uriBase,
           qs: params,
-          body: '{"url": ' + '"' + currentHostName + '/uploads/' + fileName + '"}',
+          body: '{"url": ' + '"' + currentHostName + '/uploads/' + req.file.filename + '"}',
           headers: {
               'Content-Type': 'application/json',
               'Ocp-Apim-Subscription-Key' : subscriptionKey
